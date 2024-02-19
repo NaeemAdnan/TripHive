@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TripHive</title>
 
-    <!-- Tailwind & daisyUI -->
+    <!-- Framework -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
       rel="stylesheet"
@@ -33,7 +33,7 @@ background-image: url("./assets/images/banner.png"),
           linear-gradient(
             to top,
             rgba(0, 0, 0, 0.565),
-            rgba(255, 255, 255, 0.05)
+            rgba(255, 255, 255, 0.00)
           );
         background-blend-mode: multiply;
       }
@@ -94,7 +94,7 @@ background-image: url("./assets/images/banner.png"),
     <!-- Navbar End -->
     <header class="container w-11/12 mx-auto mt-0">
       
-    <!-- Banner Section -->
+    <!-- Banner Section Start -->
       <section
         class="bg-banner h-[550px] bg-cover bg-center mt-8 rounded-[32px] flex flex-col">
         <!-- Banner Text and Button -->
@@ -162,10 +162,10 @@ background-image: url("./assets/images/banner.png"),
         </div>
 
       </section>
+    <!-- Banner Section End -->
     </header>
     <main class>
-      <!-- banner End -->
-      <!-- Ticket Coupon Section  -->
+      <!-- Ticket Coupon Section Start -->
       <section
         class="container w-11/12 flex flex-col lg:gap-16 mx-auto mt-96 md:mt-36 lg:mt-48">
         <h3 class="text-4xl font-bold text-[#030712] text-center pb-10 lg:pb-0">
@@ -229,8 +229,8 @@ background-image: url("./assets/images/banner.png"),
           See All Offers
         </button>
       </section>
-
-      <!-- Ticket & Seat Section -->
+      <!-- Tikcet Coupon Section End -->
+      <!-- Ticket and Seat Section Start -->
       <section id="ticket-and-seat-section"
         class="bg-[#F7F8F8] rounded-t-[88px] border-themecolor border-t-2 translate-y-[2px] mt-20 pb-36">
         <div>
@@ -584,7 +584,27 @@ background-image: url("./assets/images/banner.png"),
           </div>
         </div>
       </section>
+      <!-- Ticket and Seat Section End  -->
+
+      <!-- Success pop-up section -->
+    <dialog id="my_modal_1" class="modal">
+      <div class="modal-box py-10 flex flex-col items-center justify-center">
+        <img src="./assets/icon/tick-round.svg" alt>
+        <h3 class="font-bold text-lg uppercase text-themecolor">Success</h3>
+        <p class="py-4 px-6 font-bold text-gray-600 text-center">Thank you for booking with us! Your ticket is confirmed. Travel worry-free with our reliable service. <br> Check your email for details and enjoy your journey!</p>
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button onclick="location.reload(true)"
+              class="btn bg-themecolor text-white font-semibold px-16 rounded-full hover:bg-themecolor active:scale-95">Go Back</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+    <!-- Success pop-up section end -->
+
     </main>
+    <!-- Footer Section Start -->
     <footer class="bg-black text-white mx-auto">
       <div class="w-11/12 mx-auto container">
         <div
@@ -595,7 +615,7 @@ background-image: url("./assets/images/banner.png"),
               class="font-inter text-lg lg:w-3/5 opacity-80 lg:text-left">Explore our routes, learn about our services, and connect with us. Stay updated on deals, news, and travel tips. Your journey starts here.</p>
           </div>
           <div class="lg:w-[18%]">
-            <p class="text-xl font-semibold pb-5">Download Our App</p>
+            <p class="text-xl font-semibold pb-5">Get Our App</p>
             <img src="./assets/icon/google-play.svg"
               class="hover:cursor-pointer" alt>
           </div>
@@ -615,22 +635,8 @@ background-image: url("./assets/images/banner.png"),
         </div>
       </div>
     </footer>
-
-    <!--  -->
-    <dialog id="my_modal_1" class="modal">
-      <div class="modal-box py-10 flex flex-col items-center justify-center">
-        <img src="./assets/icon/tick-round.svg" alt>
-        <h3 class="font-bold text-lg uppercase text-themecolor">Success</h3>
-        <p class="py-4 px-6 font-bold text-gray-600 text-center">Thank you for booking with us! Your ticket is confirmed. Travel worry-free with our reliable service. <br> Check your email for details and enjoy your journey!</p>
-        <div class="modal-action">
-          <form method="dialog">
-            <!-- if there is a button in form, it will close the modal -->
-            <button onclick="location.reload(true)"
-              class="btn bg-themecolor text-white font-semibold px-16 rounded-full hover:bg-themecolor active:scale-95">Go Back</button>
-          </form>
-        </div>
-      </div>
-    </dialog>
+    <!-- Fooeter Section End -->
+   
 
     <script src="./js/script.js"></script>
   </body>

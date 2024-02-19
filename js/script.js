@@ -100,7 +100,6 @@ for (const seat of seats) {
     })
 }
 
-//Utility Function
 function setInnerText(idName, value) {
     const newElement = document.getElementById(idName);
     newElement.innerText = value;
